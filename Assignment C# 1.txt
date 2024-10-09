@@ -1,0 +1,70 @@
+1. What type would you choose for the following “numbers”?
+A person’s telephone number -int 
+A person’s height -float
+A person’s age-int
+A person’s gender (Male, Female, Prefer Not To Answer)-boolean
+A person’s salary-int
+A book’s ISBN : string
+A book’s price : float
+A book’s shipping weight : float
+A country’s population : int
+The number of stars in the universe : int
+The number of employees in each of the small or medium businesses in the
+United Kingdom (up to about 50,000 employees per business) : int
+
+2. What are the difference between value type and reference type variables? What is
+boxing and unboxing?
+Value types store actual data directly and are usually allocated on the stack. Each variable holds its own copy, meaning changes to one do not affect the other.
+Reference types store a reference to the data, which is allocated on the heap. Multiple variables can point to the same object, so changes through one variable affect the others.
+Boxing is the conversion of a value type to a reference type by wrapping it in an object. This process allocates memory on the heap for the boxed value.
+Unboxing is the conversion of a reference type back to a value type by extracting the value from the object. It requires a type check to ensure the object contains the correct type.
+
+3. What is meant by the terms managed resource and unmanaged resource in .NET
+Managed resources are memory and objects automatically handled by the .NET runtime (CLR) for memory allocation and deallocation.
+Unmanaged resources are system resources that are not controlled by the .NET runtime and require explicit management by the programmer.
+
+4. Whats the purpose of Garbage Collector in .NET?
+The Garbage Collector automatically reclaims memory occupied by objects that are no longer in use, preventing memory leaks and optimizing resource usage.
+
+Dividing an int variable by 0:
+This will throw a DivideByZeroException in C#. Division by zero is undefined for integers, and the runtime prevents this operation.
+
+Dividing a double variable by 0:
+Dividing a double by zero does not throw an exception. Instead, it results in positive or negative Infinity, depending on the sign of the numerator, or NaN (Not a Number) if the numerator is zero.
+
+Overflowing an int variable:
+If overflow checking is enabled (using checked), the runtime throws an OverflowException. If overflow checking is disabled, the value wraps around, meaning the variable will reset within its minimum and maximum limits.
+
+Difference between x = y++; and x = ++y;:
+
+In x = y++;, the value of y is assigned to x, and then y is incremented (post-increment).
+In x = ++y;, y is incremented first, and the new value of y is assigned to x (pre-increment).
+Difference between break, continue, and return in a loop:
+
+break: Terminates the loop entirely and moves control to the code following the loop.
+continue: Skips the current iteration and proceeds to the next iteration of the loop.
+return: Exits the entire method, not just the loop, returning control to the calling method.
+Three parts of a for statement:
+The three parts are initialization (e.g., int i = 0), condition (e.g., i < 10), and iteration (e.g., i++). While none of these parts are strictly required, a for loop without a condition becomes an infinite loop (e.g., for(;;)).
+
+Difference between = and ==:
+
+= is the assignment operator, used to assign a value to a variable.
+== is the equality operator, used to compare two values for equality.
+Does for ( ; true; ) ; compile?
+Yes, this compiles and results in an infinite loop because the condition true is always met, and no iteration statement is required.
+
+Underscore _ in a switch expression:
+The underscore (_) is used as a default pattern in a switch expression or pattern matching, meaning it matches anything not already matched by other cases.
+
+Interface required for foreach:
+An object must implement the IEnumerable or IEnumerable<T> interface to be iterated over by a foreach loop, which provides the ability to traverse a collection.
+
+
+What will happen if this code executes?
+int max = 500;
+for (byte i = 0; i < max; i++)
+{
+WriteLine(i);
+}
+Firstly it gave me an error at write line console is missed and then if i execute overflow is happening  to stop that we can cuse checked 
